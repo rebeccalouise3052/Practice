@@ -1,0 +1,7 @@
+import math
+
+def radian_degree(x):
+    y = x * (180/math.pi)
+    return f"{x} radians is equivalent to {y} degrees"
+
+print(radian_degree(1))
