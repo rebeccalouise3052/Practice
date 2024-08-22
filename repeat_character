@@ -1,0 +1,14 @@
+def repeat_character(string):
+    if isinstance(string, str) == False:
+        raise ValueError("Input must be a string")
+
+    result = ""
+
+    for char in string:
+        result += char * 2
+
+    return result
+
+string = "hello"
+
+print(repeat_character(string))
