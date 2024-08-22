@@ -1,0 +1,27 @@
+def card_security(card):
+
+    # ensure input is a string
+    if not isinstance(card, str):
+        raise ValueError("Input must be a string")
+    # ensure input is only digits
+    for char in card:
+        if not char.isdigit():
+            raise ValueError("Input must be digits only")
+
+    length = len(card)
+
+    if length <= 4:
+        return card
+
+    hidden_part = '*' * (length - 4)
+    last_four = card[-4:]
+
+    return hidden_part + last_four
+
+card = "5780983563529836"
+not_string = 5780983563529836
+not_digit = "5780j83563f29836"
+
+print(card_security(card))
+#print(card_security(not_string))
+#print(card_security(not_digit))
