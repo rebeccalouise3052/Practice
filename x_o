@@ -1,0 +1,14 @@
+def X_equal_O(string):
+    no_X = string.count("X") + string.count("x")
+    no_O = string.count("O") + string.count("o")
+    
+    if no_X == no_O:
+        return True
+    elif no_X != no_O:
+        return False 
+    elif no_X == 0 and no_O == 0:
+        return True
+
+print(X_equal_O("xXxoOo"))
+print(X_equal_O("xXRtoOx"))
+print(X_equal_O("Rebecca"))
