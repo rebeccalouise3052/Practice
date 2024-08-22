@@ -1,0 +1,20 @@
+def sort_list(array, string):
+    if string == "asc":
+        return sorted(array) # using built in sorted() func to sort in ascending order
+    elif string == "desc":
+        return sorted(array, reverse=True) # descending order
+    elif string == "none":
+        return array
+    else:
+        return "Invalid string parameter"
+
+A = [1, 2, 4, 3, 6, 5]
+none = "none"
+asc = "asc"
+desc = "desc"
+invalid = "hello"
+
+print(sort_list(A, none))
+print(sort_list(A, asc))
+print(sort_list(A, desc))
+print(sort_list(A, invalid))
