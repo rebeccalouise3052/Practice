@@ -1,0 +1,13 @@
+def no_vowels(string):
+    vowels = "aeiou" # define string containing all vowels
+    result = 0 # initialize the number of vowels at 0
+    
+    for char in string: # iterate for each character in the string
+    # for char in string.lower(): # this first converts to lowercase
+        if char in vowels: 
+            result += 1 # if the character is a vowel, add 1 to number of vowels
+
+    return result
+
+string = "audio"
+print(no_vowels(string))
