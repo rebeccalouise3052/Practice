@@ -1,0 +1,11 @@
+def discount(price, discount):
+    if isinstance(price, int) == False or isinstance(discount, int) == False:
+        raise ValueError("Value must be an integer")
+
+    y = price * (discount/100)
+
+    final_price = price - y
+
+    return f"The discounted price is £{final_price:.2f}"
+
+print(discount(100, 20))
