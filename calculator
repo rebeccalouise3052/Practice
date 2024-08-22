@@ -1,0 +1,17 @@
+def calculator(x, operator, y):
+    if operator == '+':
+        return x + y
+    if operator == '-':
+        return x - y
+    if operator == '/':
+        if y == 0:
+            raise ValueError("Cannot divide by 0")
+        return x / y
+    if operator == '.':
+        return x * y
+    else:
+        raise ValueError("Invalid operator")
+
+print(calculator(3, ".", 4))
+#print(calculator(4, "r", 6))
+#print(calculator(5, "/", 0))
